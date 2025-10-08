@@ -1,32 +1,32 @@
-//
-//  WalkthroughApp.swift
-//  Walkthrough
-//
-//  Created by Abdullah on 11.08.25.
-//
-
 import SwiftUI
-import SwiftData
 
+// Əsas tətbiq görünüşü.
 @main
 struct WalkthroughApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @StateObject private var settings = SettingsManager()
+    @StateObject private var appState = AppState()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(settings)
+                .environmentObject(appState)
+                .preferredColorScheme(settings.theme.colorScheme)
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+// MARK: - RootView (Intro / Main Flow)
+struct RootView: View {
+    @EnvironmentObject var settings: SettingsManager
+
+    var body: some View {
+        Group {
+            if settings.hasSeenIntro {
+                MainAppView()
+            } else {
+                IntroView()
+            }
+        }
     }
 }
