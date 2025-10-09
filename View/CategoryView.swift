@@ -6,17 +6,7 @@
 //
 
 import SwiftUI
-<<<<<<< HEAD
 
-struct CategoryView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    CategoryView()
-=======
 struct CategoryView: View {
 let category: String
 let books: [Book]
@@ -79,5 +69,4 @@ private func BookGridItem(book: Book, size: CGSize) -> some View {
         .accessibilityLabel("Open \(book.title)")
     }
 }
->>>>>>> 3c54132 (first commit)
 }

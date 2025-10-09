@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-//
-//  Book.swift
-//  Walkthrough
-//
-//  Created by Abdullah on 11.08.25.
-//
 
-import SwiftUI
-
-struct Book: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Book()
-}
-=======
 import SwiftUI
 //
 //  Theme.swift
@@ -167,4 +148,3 @@ let ayahs: [Ayah] = [
     Ayah(id: UUID().uuidString, text: "Alif, Lam, Ra. This is a Book which We have revealed to you, [O Muhammad], that you might bring mankind out of darknesses into the light by permission of their Lord - to the path of the Exalted in Might, the Praiseworthy -", surah: "Ibrahim", verse: 1),
     Ayah(id: UUID().uuidString, text: "The month of Ramadhan [is that] in which was revealed the Qur'an, a guidance for the people and clear proofs of guidance and criterion. So whoever sights [the new moon of] the month, let him fast it; and whoever is ill or on a journey - then an equal number of other days. Allah intends for you ease and does not intend for you hardship and [wants] for you to complete the period and to glorify Allah for that [to] which He has guided you; and perhaps you will be grateful.", surah: "Al-Baqarah", verse: 185)
 ]
->>>>>>> 3c54132 (first commit)

@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-<<<<<<< HEAD
-struct TransparentBlurView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-=======
 struct TransparentBlurView: UIViewRepresentable {
     func makeUIView(context: Context) -> CustomBlurView {
         return CustomBlurView(effect: .init(style: .systemUltraThinMaterial))
@@ -42,7 +37,6 @@ class CustomBlurView: UIVisualEffectView {
     }
     required  init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
->>>>>>> 3c54132 (first commit)
     }
 }
 
